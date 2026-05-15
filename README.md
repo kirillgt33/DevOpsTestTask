@@ -38,3 +38,10 @@ curl http://localhost
 
 Ожидаемый ответ:
 Hello from Effective Mobile!
+
+![image](https://github.com/user-attachments/assets/da2f4a11-a0d6-40b5-8bfe-b17cf1bb1ccb)
+
+## Troubleshooting
+- **Контейнеры не поднимаются:** Проверьте, не занят ли порт 80 другим процессом: `sudo lsof -i :80`.
+- **Ошибка 502:** Убедитесь, что backend-контейнер прошел стадию Healthcheck (`docker ps`).
+- **Просмотр логов в реальном времени:** `docker-compose logs -f`.
